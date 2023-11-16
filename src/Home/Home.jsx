@@ -10,8 +10,9 @@ const Home = () => {
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#menu"
+        id="toggleButton"
       >
-        <span className="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon">Menu</span>
       </button>
       <div class="offcanvas offcanvas-start" tabindex="-1" id="menu">
         <div class="offcanvas-header">
