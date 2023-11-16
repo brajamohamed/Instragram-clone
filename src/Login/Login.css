@@ -6,3 +6,6 @@
   position: absolute;
   bottom: 50px;
 }
+.container {
+  max-height: 100vh;
+}

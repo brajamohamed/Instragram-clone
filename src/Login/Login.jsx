@@ -21,7 +21,7 @@ const Login = ({ setLoggedIn }) => {
   };
 
   return (
-    <div className="container vh-100 mt-5">
+    <div className="container mt-5">
       <div className="row d-flex justify-content-center align-items-center">
         <div className="col-xl-5 col-lg-6 d-none d-xl-block">
           <img src={loginPic} alt="login image" />
