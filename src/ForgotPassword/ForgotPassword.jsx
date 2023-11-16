@@ -67,9 +67,11 @@ const ForgotPassword = () => {
             </Link>
           </div>
           <div className="border">
-            <button className="btn d-block w-100">
-              <h5 className=" ">Back to Login</h5>
-            </button>
+            <Link to="/">
+              <button className="btn d-block w-100">
+                <h5 className=" ">Back to Login</h5>
+              </button>
+            </Link>
           </div>
         </div>
       </div>
