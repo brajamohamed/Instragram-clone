@@ -69,7 +69,7 @@ const ForgotPassword = () => {
           <div className="border">
             <Link to="/" className="text-decortion-none">
               <button className="btn d-block w-100">
-                <h5 className="text-decoratin-none">Back to Login</h5>
+                <h5 className="text-decoration-none">Back to Login</h5>
               </button>
             </Link>
           </div>
