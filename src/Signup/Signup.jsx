@@ -1,4 +1,5 @@
 import React from "react";
+import "./Signup.css";
 import Facebook from "../Login/facebook.png";
 import Playstore from "../Login/google play.png";
 import MicrosoftStore from "../Login/microsoft.png";
