@@ -19,9 +19,9 @@ const ForgotPassword = () => {
     }
   };
   return (
-    <div className="container ">
-      <div className="row d-flex justify-content-center mt-5">
-        <div className="card col-lg-6 border content">
+    <div className="container">
+      <div className="row d-flex justify-content-center mt-5 ">
+        <div className="col-lg-6 p-5 border content">
           <img
             className="card-img-top"
             src={LockIcon}
@@ -66,8 +66,8 @@ const ForgotPassword = () => {
               <h5>Create New Account</h5>
             </Link>
           </div>
-          <div className="card-footer border">
-            <button className="btn w-100">
+          <div className="border">
+            <button className="btn d-block w-100">
               <h5 className=" ">Back to Login</h5>
             </button>
           </div>
