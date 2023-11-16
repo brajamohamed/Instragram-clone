@@ -108,7 +108,7 @@ const Login = ({ setLoggedIn }) => {
           </div>
         </div>
       </div>
-      <footer className="footer">
+      {/* <footer className="footer">
         <div className="d-flex justify-content-center flex-wrap">
           <a href="/" className="text-decoration-none text-muted ">
             <span className="me-2">Meta</span>
@@ -153,7 +153,7 @@ const Login = ({ setLoggedIn }) => {
         <div>
           <small className="text-muted">&copy; 2023 Instagram from Meta </small>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };
