@@ -1,12 +1,17 @@
-.offcanvas-body ul li {
-  list-style: none;
-  margin-bottom: 30px;
+html {
+  background-color: black;
 }
-.offcanvas-body ul li a {
-  text-decoration: none;
-  color: black;
+.homePage {
+  display: flex;
 }
-#toggleButton {
-  position: absolute;
-  left: 10px;
+
+.timeline_item {
+  background-color: black;
+  color: white;
+  flex: 0.8;
+}
+.navigation_item {
+  background-color: black;
+  color: white;
+  flex: 0.2;
 }

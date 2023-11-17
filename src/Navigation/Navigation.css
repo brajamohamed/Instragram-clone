@@ -1,0 +1,44 @@
+.offcanvas {
+  background-color: black;
+}
+.offcanvas ul li {
+  list-style: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 10px;
+}
+.offcanvas ul li a {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+}
+
+.offcanvas ul li:hover {
+  background-color: rgba(250, 255, 255);
+}
+.offcanvas ul li:hover a {
+  color: black;
+}
+.profile-section {
+  position: absolute;
+  bottom: 20px;
+}
+#nav-inta-icon {
+  width: 150px;
+}
+.dropdown ul {
+  background-color: black;
+}
+.dropdown ul li {
+  margin: 5px;
+  padding: 0;
+}
+.dropdown ul li a {
+  font-size: 20px;
+}
+.navbar-toggler-icon {
+  position: relative;
+  left: 15px;
+}

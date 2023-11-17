@@ -22,14 +22,22 @@ const Login = ({ setLoggedIn }) => {
 
   return (
     <div className="container mt-5">
-      <div className="row d-flex justify-content-center align-items-center">
-        <div className="col-xl-5 col-lg-6 d-none d-xl-block">
-          <img src={loginPic} alt="login image" />
+      <div className="row d-flex justify-content-center align-items-center login-row">
+        <div className="col-xl-5 col-lg-6">
+          <div>
+            <img src={loginPic} alt="login image" />
+          </div>
         </div>
-        <div className="col-xl-5 col-lg-6 col-md-8 ">
-          <div className="border px-5 login-form" id="needs-validation">
-            <h1 className="my-5">Instagram</h1>
-            <form action="">
+        <div className="col-xl-5 col-lg-6 col-md-8">
+          <div className="border px-5 login-form">
+            {/* <h1 className="my-5">Instagram</h1> */}
+            <img
+              src="https://logos-download.com/wp-content/uploads/2016/03/Instagram_Logo_2016.png"
+              alt="insta logo"
+              id="insta_name_icon"
+              className="mt-5 justify-content-center"
+            />
+            <form action="" className="" id="needs-validation">
               <div className="input-group mb-3">
                 <input
                   type="text"

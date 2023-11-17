@@ -1,0 +1,7 @@
+.story-section {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  overflow: hidden;
+  /* flex-direction: row; */
+}

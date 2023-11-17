@@ -2,10 +2,14 @@
   width: 90%;
   height: 60px;
 }
-.footer {
-  position: absolute;
-  bottom: 50px;
-}
 .container {
   max-height: 100vh;
+  min-height: 100vh;
+}
+.login-row {
+  max-height: 100vh;
+  min-height: 100vh;
+}
+#insta_name_icon {
+  width: 250px;
 }
