@@ -1,8 +1,6 @@
-html {
-  background-color: black;
-}
 .homePage {
   display: flex;
+  flex-direction: row;
 }
 
 .timeline_item {
@@ -11,6 +9,7 @@ html {
   flex: 0.8;
 }
 .navigation_item {
+  position: relative;
   background-color: black;
   color: white;
   flex: 0.2;
