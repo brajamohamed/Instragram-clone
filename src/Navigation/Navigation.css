@@ -1,3 +1,7 @@
+.sideNavbar {
+  position: fixed;
+  z-index: 999;
+}
 .offcanvas {
   background-color: black;
 }

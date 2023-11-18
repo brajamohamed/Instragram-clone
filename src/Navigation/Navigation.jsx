@@ -17,7 +17,7 @@ import ReportGmailerrorredIcon from "@mui/icons-material/ReportGmailerrorred";
 import { Link } from "react-router-dom";
 const Navigation = () => {
   return (
-    <div>
+    <div className="sideNavbar">
       <button
         className="btn"
         type="button"

@@ -6,30 +6,72 @@ import Suggestions from "./Suggestions/Suggestions";
 const Timeline = () => {
   const [posts, setPosts] = useState([
     {
-      user: "redian_",
+      user: "MSD",
       postImage:
-        "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
+        "https://www.hindustantimes.com/ht-img/img/2023/03/26/550x309/raina_dhoni_1679820810885_1679820817255_1679820817255.jpg",
       likes: 54,
-      timestamp: "2d",
+      timestamp: "Just now",
     },
     {
-      user: "johndoe",
+      user: "sureshraina3",
       postImage:
-        "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80",
+        "https://starsunzip.com/wp-content/uploads/2022/09/suresh-raina.jpg",
       likes: 432,
-      timestamp: "2d",
+      timestamp: "A moment ago",
     },
     {
-      user: "mariussss",
+      user: "I'mRo45",
       postImage:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
+        "https://im.rediff.com/cricket/2017/dec/14rohit2.jpg?w=670&h=900",
       likes: 140,
-      timestamp: "2d",
+      timestamp: "5mins",
     },
     {
-      user: "kobee_18",
+      user: "Mohammed Shami",
       postImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGCAaQ5u1TMTij5ELPWi5-VPtlSqELw-R6lj0EpYmNcGt56kOQaCokzS0IK81MOSphlkw&usqp=CAU",
+        "https://images.news18.com/ibnlive/uploads/2022/10/collage-maker-17-oct-2022-08.08-pm-166601750816x9.jpg",
+      likes: 14,
+      timestamp: "12mins",
+    },
+    {
+      user: "BumBumRa",
+      postImage:
+        "https://akm-img-a-in.tosshub.com/indiatoday/images/media_bank/202309/indias-jasprit-bumrah-celebrates-the-wicket-of-sri-lankas-pathum-nissanka-ap-135700795-1x1_1.jpg?VersionId=.mC58vrINDUNLkCUaQsnRuQOPr6ZyX6b",
+      likes: 14,
+      timestamp: "1hr",
+    },
+    {
+      user: "IamSiraj",
+      postImage:
+        "https://assets.telegraphindia.com/telegraph/2023/Sep/1695090800_siraj.gif",
+      likes: 14,
+      timestamp: "3hrs",
+    },
+    {
+      user: "Sachin",
+      postImage:
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2023/11/03/2614150-untitled-design-2023-11-03t124737.718.jpg?im=Resize=(640,360)",
+      likes: 14,
+      timestamp: "8hrs",
+    },
+    {
+      user: "Gambhir",
+      postImage:
+        "https://img.mensxp.com/media/content/2022/Apr/header-credit-Twitter---BCCI_62483d25d1055.jpeg",
+      likes: 14,
+      timestamp: "14hrs",
+    },
+    {
+      user: "Sara Tendulkar",
+      postImage:
+        "https://crickettimes.com/wp-content/uploads/2023/11/Shubman-Gill-Sara-Tendulkar-1-700x365.webp",
+      likes: 14,
+      timestamp: "1d",
+    },
+    {
+      user: "I'Ricky",
+      postImage:
+        "https://c.ndtvimg.com/2022-03/jtp9imco_ricky-ponting-twitter_625x300_26_March_22.jpg?im=FeatureCrop,algorithm=dnn,width=806,height=605",
       likes: 14,
       timestamp: "2d",
     },
