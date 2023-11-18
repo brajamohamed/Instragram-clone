@@ -2,27 +2,40 @@
   position: fixed;
   z-index: 999;
 }
-.offcanvas {
+.navbar {
   background-color: black;
 }
-.offcanvas ul li {
+.offcanvas-header {
+  position: relative;
+  left: 30px;
+  top: 0px;
+}
+.btn-close {
+  position: relative;
+  left: 50px;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+}
+.navbar ul li {
   list-style: none;
   margin-bottom: 10px;
   padding: 10px;
-  border: 2px solid;
+  border: 2px solid black;
   border-radius: 10px;
 }
-.offcanvas ul li a {
+.navbar ul li a {
   text-decoration: none;
   font-size: 25px;
   font-weight: 600;
   color: white;
 }
 
-.offcanvas ul li:hover {
+.navbar ul li:hover {
   background-color: rgba(250, 255, 255);
 }
-.offcanvas ul li:hover a {
+.navbar ul li:hover a {
   color: black;
 }
 .profile-section {
@@ -32,14 +45,14 @@
 #nav-inta-icon {
   width: 150px;
 }
-.dropdown ul {
+.dropup ul {
   background-color: black;
 }
-.dropdown ul li {
+.dropup ul li {
   margin: 5px;
   padding: 0;
 }
-.dropdown ul li a {
+.dropup ul li a {
   font-size: 20px;
 }
 .navbar-toggler-icon {

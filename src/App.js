@@ -9,12 +9,15 @@ import Signup from "./Signup/Signup";
 import Home from "./Home/Home";
 import ForgotPassword from "./ForgotPassword/ForgotPassword";
 import { useEffect, useState } from "react";
+import Profile from "./Profile/Profile";
+import Navigation from "./Navigation/Navigation";
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
 
   return (
     <BrowserRouter>
       <div className="App">
+        {loggedIn ? <Navigation /> : null}
         <Routes>
           <Route
             path="/"
@@ -22,6 +25,7 @@ function App() {
           />
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
     </BrowserRouter>

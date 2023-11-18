@@ -2,15 +2,14 @@
   display: flex;
   flex-direction: row;
 }
-
-.timeline_item {
-  background-color: black;
-  color: white;
-  flex: 0.8;
-}
 .navigation_item {
   position: relative;
   background-color: black;
   color: white;
   flex: 0.2;
+}
+.timeline_item {
+  background-color: black;
+  color: white;
+  flex: 0.8;
 }

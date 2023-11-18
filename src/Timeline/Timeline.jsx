@@ -90,7 +90,7 @@ const Timeline = () => {
           ))}
         </div>
       </div>
-      <div className="timeline__right">
+      <div className="timeline__right d-none d-lg-block">
         <Suggestions />
       </div>
     </div>

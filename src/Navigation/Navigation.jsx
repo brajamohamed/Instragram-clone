@@ -29,7 +29,13 @@ const Navigation = () => {
           <MenuIcon color="secondary" />
         </span>
       </button>
-      <div class="offcanvas offcanvas-start" tabindex="-1" id="menu">
+      <div
+        class="offcanvas offcanvas-start navbar"
+        data-bs-scroll="true"
+        data-bs-backdrop="flase"
+        tabindex="-1"
+        id="menu"
+      >
         <div class="offcanvas-header">
           <h5 class="offcanvas-title bg-white" id="menuLabel">
             <img
@@ -42,6 +48,7 @@ const Navigation = () => {
             type="button"
             className="btn-close text-white bg-white"
             data-bs-dismiss="offcanvas"
+            data-bs-target="#menu"
           ></button>
         </div>
         <div class="offcanvas-body">
@@ -94,7 +101,7 @@ const Navigation = () => {
                 Create
               </Link>
             </li>
-            <div className="dropdown profile-section">
+            <div className="dropup profile-section">
               <button
                 className="btn text-white dropdown-toggle"
                 type="button"
