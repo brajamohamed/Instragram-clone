@@ -77,9 +77,9 @@ const Timeline = () => {
     },
   ]);
   return (
-    <div className="timeline container">
+    <div className="timeline container-fluid">
       <div className="row">
-        <div className="timeline__left col-lg-4">
+        <div className="timeline__left col-lg-8">
           <div className="timeline__posts">
             {posts.map((post) => (
               <Post

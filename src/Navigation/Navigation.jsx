@@ -46,12 +46,12 @@ const Navigation = () => {
               id="nav-inta-icon"
             />
           </h5>
-          <button
+          {/* <button
             type="button"
             className="btn-close text-white bg-white"
             data-bs-dismiss="offcanvas"
             data-bs-target="#menu"
-          ></button>
+          ></button> */}
         </div>
         <div class="offcanvas-body">
           <ul>
