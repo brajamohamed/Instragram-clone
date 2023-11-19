@@ -77,21 +77,23 @@ const Timeline = () => {
     },
   ]);
   return (
-    <div className="timeline">
-      <div className="timeline__left">
-        <div className="timeline__posts">
-          {posts.map((post) => (
-            <Post
-              user={post.user}
-              postImage={post.postImage}
-              likes={post.likes}
-              timestamp={post.timestamp}
-            />
-          ))}
+    <div className="timeline container">
+      <div className="row">
+        <div className="timeline__left col-lg-4">
+          <div className="timeline__posts">
+            {posts.map((post) => (
+              <Post
+                user={post.user}
+                postImage={post.postImage}
+                likes={post.likes}
+                timestamp={post.timestamp}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="timeline__right d-none d-lg-block">
-        <Suggestions />
+        <div className="timeline__right col-lg-4 d-md-none d-sm-none d-lg-block">
+          <Suggestions />
+        </div>
       </div>
     </div>
   );

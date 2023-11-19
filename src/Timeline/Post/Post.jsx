@@ -10,12 +10,12 @@ import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 function Post({ user, postImage, likes, timestamp }) {
   return (
     <div className="post">
-      <div className="post__header">
-        <div className="post__headerAuthor">
+      <div className="post_title">
+        <div className="post_userImg">
           <Avatar style={{ marginRight: "10px" }}>
             {user.charAt(0).toUpperCase()}
-          </Avatar>{" "}
-          {user} • <span>{timestamp}</span>
+          </Avatar>
+          {user} &bull; <span style={{ marginLeft: "5px" }}>{timestamp}</span>
         </div>
         <MoreHorizIcon />
       </div>

@@ -7,6 +7,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import ExploreIcon from "@mui/icons-material/Explore";
 import MovieFilterIcon from "@mui/icons-material/MovieFilter";
 import SendIcon from "@mui/icons-material/Send";
+import TelegramIcon from "@mui/icons-material/Telegram";
+
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ControlPointIcon from "@mui/icons-material/ControlPoint";
 import SettingsIcon from "@mui/icons-material/Settings";
@@ -18,8 +20,8 @@ import { Link } from "react-router-dom";
 const Navigation = () => {
   return (
     <div className="sideNavbar">
-      <button
-        className="btn"
+      {/* <button
+        className="btn d-lg-none"
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#menu"
@@ -28,9 +30,9 @@ const Navigation = () => {
         <span className="navbar-toggler-icon">
           <MenuIcon color="secondary" />
         </span>
-      </button>
+      </button> */}
       <div
-        class="offcanvas offcanvas-start navbar"
+        class="offcanvas offcanvas-start show d-none d-xl-block navbar"
         data-bs-scroll="true"
         data-bs-backdrop="flase"
         tabindex="-1"
@@ -83,7 +85,7 @@ const Navigation = () => {
 
             <li>
               <Link to="/">
-                <SendIcon className="me-2" />
+                <TelegramIcon className="me-2" />
                 Message
               </Link>
             </li>

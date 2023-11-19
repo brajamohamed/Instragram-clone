@@ -4,7 +4,6 @@
   /* justify-content: center; */
 }
 .timeline__left {
-  flex: 0.6;
   align-items: center;
   /* justify-content: center; */
   display: flex;
@@ -15,7 +14,7 @@
   align-items: center;
 }
 .timeline__right {
-  flex: 0.4;
   display: flex;
   justify-content: center;
+  background-color: black;
 }

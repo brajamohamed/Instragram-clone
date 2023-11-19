@@ -1,15 +1,4 @@
-.homePage {
-  display: flex;
-  flex-direction: row;
-}
-.navigation_item {
-  position: relative;
+.home {
   background-color: black;
   color: white;
-  flex: 0.2;
-}
-.timeline_item {
-  background-color: black;
-  color: white;
-  flex: 0.8;
 }

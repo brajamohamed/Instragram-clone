@@ -1,9 +1,10 @@
 .sideNavbar {
   position: fixed;
-  z-index: 999;
+  z-index: 1;
 }
 .navbar {
   background-color: black;
+  max-width: 22%;
 }
 .offcanvas-header {
   position: relative;
@@ -12,7 +13,7 @@
 }
 .btn-close {
   position: relative;
-  left: 50px;
+  /* left: 30px; */
 }
 .navbar ul {
   margin: 0;

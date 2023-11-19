@@ -1,17 +1,18 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/js/bootstrap.bundle.js";
 import "./Home.css";
 import Navigation from "../Navigation/Navigation";
 import Timeline from "../Timeline/Timeline";
+
 const Home = () => {
   return (
-    <div className="homePage">
-      <div className="navigation_item">
-        <Navigation />
-      </div>
-      <div className="timeline_item">
-        <Timeline />
+    <div className="container-fluid home">
+      <div className="row">
+        <div className="navigation-item col-xl-3">
+          <Navigation />
+        </div>
+        <div className="timeline-item col-xl-9">
+          <Timeline />
+        </div>
       </div>
     </div>
   );

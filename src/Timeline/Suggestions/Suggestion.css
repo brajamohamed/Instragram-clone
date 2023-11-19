@@ -1,0 +1,32 @@
+.username__left {
+  display: inline-flex;
+}
+
+.username__info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 7px;
+}
+
+.username {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.relation {
+  color: grey;
+  font-size: 18px;
+}
+
+.follow__button {
+  color: #0095f6;
+  font-weight: bold;
+  background: 0;
+  border: 0;
+  margin-right: 5px;
+}
+
+.follow__button:hover {
+  color: white;
+  cursor: pointer;
+}

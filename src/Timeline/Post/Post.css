@@ -1,9 +1,9 @@
 .post {
-  width: 70%;
-  margin: 30px 40px 50px 40px;
+  margin: 30px 40px;
+  width: 100%;
 }
 
-.post__header {
+.post_title {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -11,14 +11,14 @@
   margin-bottom: 10px;
 }
 
-.post__headerAuthor {
+.post_userImg {
   display: flex;
   flex-direction: row;
   align-items: center;
   font-weight: bolder;
 }
 
-.post__headerAuthor > span {
+.post_userImg > span {
   color: grey;
   font-size: 15px;
 }
@@ -37,8 +37,9 @@
 }
 
 .postIcon {
+  margin-top: 6px;
   padding: 7px;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .postIcon :hover {

@@ -17,7 +17,6 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        {loggedIn ? <Navigation /> : null}
         <Routes>
           <Route
             path="/"
