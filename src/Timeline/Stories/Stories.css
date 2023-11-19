@@ -1,12 +1,12 @@
 .story-section {
   display: flex;
   align-items: center;
-  gap: 100px;
-  overflow-x: auto;
-  scrollbar-width: thin;
-  scrollbar-color: transparent transparent;
-  .container::-webkit-scrollbar {
+  gap: 25px;
+  /* overflow-x: auto; */
+  /* scrollbar-width: thin; */
+  /* scrollbar-color: transparent transparent; */
+  /* .container::-webkit-scrollbar {
     display: none;
-  }
-  -ms-overflow-style: none;
+  } */
+  /* -ms-overflow-style: none; */
 }

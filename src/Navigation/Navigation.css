@@ -4,7 +4,8 @@
 }
 .navbar {
   background-color: black;
-  max-width: 22%;
+  max-width: 20%;
+  border-right: 5px solid white;
 }
 .offcanvas-header {
   position: relative;

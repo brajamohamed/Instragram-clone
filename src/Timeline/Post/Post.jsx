@@ -3,13 +3,23 @@ import { Avatar } from "@mui/material";
 import React from "react";
 import "./Post.css";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
-
+import BookmarkIcon from "@mui/icons-material/Bookmark";
+import { useState } from "react";
 function Post({ user, postImage, likes, timestamp }) {
+  const [liked, setLiked] = useState(false);
+  const [saved, setSaved] = useState(false);
+  const handleLike = () => {
+    setLiked(!liked);
+  };
+  const handleSave = () => {
+    setSaved(!saved);
+  };
   return (
-    <div className="post">
+    <div className="post mt-5">
       <div className="post_title">
         <div className="post_userImg">
           <Avatar style={{ marginRight: "10px" }}>
@@ -19,18 +29,26 @@ function Post({ user, postImage, likes, timestamp }) {
         </div>
         <MoreHorizIcon />
       </div>
-      <div className="post__image">
-        <img src={postImage} alt="Post Image" />
+      <div className="post_image">
+        <img src={postImage} alt="Post Image" className="img-fluid" />
       </div>
       <div className="post__footer">
         <div className="post__footerIcons">
           <div className="post__iconsMain">
-            <FavoriteBorderIcon className="postIcon" />
-            <ChatBubbleOutlineIcon className="postIcon" />
+            {liked ? (
+              <FavoriteIcon className="postIcon liked" onClick={handleLike} />
+            ) : (
+              <FavoriteBorderIcon className="postIcon" onClick={handleLike} />
+            )}
+            <ChatBubbleOutlineIcon className="postIcon " />
             <TelegramIcon className="postIcon" />
           </div>
           <div className="post__iconSave">
-            <BookmarkBorderIcon className="postIcon" />
+            {saved ? (
+              <BookmarkIcon className="postIcon saved" onClick={handleSave} />
+            ) : (
+              <BookmarkBorderIcon className="postIcon" onClick={handleSave} />
+            )}
           </div>
         </div>
         Liked by {likes} people.

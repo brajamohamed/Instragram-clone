@@ -23,7 +23,7 @@
   font-size: 15px;
 }
 
-.post__image > img {
+.post_image > img {
   width: 100%;
   border-radius: 6px;
   border: 0.6px solid rgba(128, 128, 128, 0.516);
@@ -37,11 +37,18 @@
 }
 
 .postIcon {
-  margin-top: 6px;
-  padding: 7px;
+  margin-top: 8px;
+  margin-right: 5px;
+  /* padding: 3px; */
   font-size: 40px;
 }
 
 .postIcon :hover {
   cursor: pointer;
+}
+.liked {
+  color: red;
+}
+.saved {
+  color: rgb(131, 131, 234);
 }
