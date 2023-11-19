@@ -1,14 +1,14 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import "./SmallBar.css";
 import "./Navigation.css";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
 import ExploreIcon from "@mui/icons-material/Explore";
 import MovieFilterIcon from "@mui/icons-material/MovieFilter";
-import SendIcon from "@mui/icons-material/Send";
 import TelegramIcon from "@mui/icons-material/Telegram";
-
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ControlPointIcon from "@mui/icons-material/ControlPoint";
 import SettingsIcon from "@mui/icons-material/Settings";
@@ -16,88 +16,63 @@ import MonitorHeartIcon from "@mui/icons-material/MonitorHeart";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import ModeNightIcon from "@mui/icons-material/ModeNight";
 import ReportGmailerrorredIcon from "@mui/icons-material/ReportGmailerrorred";
-import InstaNameLogo from "./instagram-logo-white-text-black-background.png";
 import { Link } from "react-router-dom";
-const Navigation = () => {
+const SmallBar = () => {
   return (
-    <div className="sideNavbar">
-      {/* <button
-        className="btn d-lg-none"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#menu"
-        id="toggleButton"
-      >
-        <span className="navbar-toggler-icon">
-          <MenuIcon color="secondary" />
-        </span>
-      </button> */}
+    <div className="sideSmallbar">
       <div
-        class="offcanvas offcanvas-start show navbar"
+        class="offcanvas offcanvas-start show smallbar"
         data-bs-scroll="true"
-        data-bs-backdrop="flase"
+        data-bs-backdrop="false"
         tabindex="-1"
-        id="menu"
+        id="smallMenu"
       >
-        <div class="offcanvas-header mt-4">
-          <h5 class="offcanvas-title bg-white" id="menuLabel">
-            <img src={InstaNameLogo} alt="insta-name-logo" id="nav-inta-icon" />
-          </h5>
-          {/* <button
-            type="button"
-            className="btn-close text-white bg-white"
-            data-bs-dismiss="offcanvas"
-            data-bs-target="#menu"
-          ></button> */}
+        <div class="header mt-4 mb-4">
+          <Link to="" class="offcanvas-title" id="menuLabel">
+            <InstagramIcon className="small-icon" />
+          </Link>
         </div>
         <div class="offcanvas-body">
           <ul>
             <li>
-              <Link to="">
-                <HomeIcon className="me-2" />
-                Home
+              <Link to="/">
+                <HomeIcon className="small-icon" />
               </Link>
             </li>
 
             <li>
               <Link to="/">
-                <SearchIcon className="me-2" />
-                Search
+                <SearchIcon className="small-icon" />
               </Link>
             </li>
 
             <li>
               <Link to="/">
-                <ExploreIcon className="me-2" />
-                Explore
+                <ExploreIcon className="small-icon" />
               </Link>
             </li>
 
             <li>
               <Link to="/">
-                <MovieFilterIcon className="me-2" />
-                Reels
+                <MovieFilterIcon className="small-icon" />
               </Link>
             </li>
 
             <li>
               <Link to="/">
-                <TelegramIcon className="me-2" />
-                Message
+                <TelegramIcon className="small-icon" />
               </Link>
             </li>
 
             <li>
               <Link to="/">
-                <FavoriteBorderIcon className="me-2" />
-                Notification
+                <FavoriteBorderIcon className="small-icon" />
               </Link>
             </li>
 
             <li>
               <Link to="/">
-                <ControlPointIcon className="me-2" />
-                Create
+                <ControlPointIcon className="small-icon" />
               </Link>
             </li>
             <div className="dropup profile-section">
@@ -107,7 +82,6 @@ const Navigation = () => {
                 data-bs-toggle="dropdown"
               >
                 <MenuIcon className="me-2" />
-                More
               </button>
               <ul className="dropdown-menu">
                 <li>
@@ -155,4 +129,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default SmallBar;

@@ -1,6 +1,5 @@
 .story-section {
   display: flex;
-  align-items: center;
   gap: 25px;
   /* overflow-x: auto; */
   /* scrollbar-width: thin; */

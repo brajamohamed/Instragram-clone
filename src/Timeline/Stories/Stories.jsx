@@ -4,12 +4,7 @@ import Story from "./Story/Story";
 
 const Stories = () => {
   return (
-    <div className="story-section">
-      <Story />
-      <Story />
-      <Story />
-      <Story />
-      <Story />
+    <div className="story-section mt-5">
       <Story />
       <Story />
       <Story />

@@ -81,6 +81,9 @@ const Timeline = () => {
       <div className="row">
         <div className="timeline__left col-lg-8">
           <div className="timeline__posts">
+            <div className="story">
+              <Stories className="story" />
+            </div>
             {posts.map((post) => (
               <Post
                 user={post.user}
