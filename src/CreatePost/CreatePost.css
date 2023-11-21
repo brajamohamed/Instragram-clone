@@ -1,0 +1,41 @@
+.modal-container {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-dialog {
+  background-color: white;
+  border-radius: 10px;
+  width: 600px;
+}
+.modal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+.modal-body {
+  display: flex;
+  justify-content: center;
+}
+.modal-footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+.modal-footer .btn {
+  border: none;
+}
+.btn-create {
+  background-color: #42a942;
+}
+.btn-cancel {
+  background-color: #d9534f;
+}

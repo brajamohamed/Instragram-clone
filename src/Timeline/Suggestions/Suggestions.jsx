@@ -31,9 +31,9 @@ function Suggestions() {
     },
   ];
   return (
-    <div className="suggestions">
+    <div className="suggestions container">
       <div className="suggestions__title">Suggestions to follow</div>
-      <div className="suggestions__username">
+      <div className="suggestions__username ">
         {suggests.map((item) => {
           return <Suggestion item={item} />;
         })}

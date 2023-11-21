@@ -21,22 +21,23 @@ const Login = ({ setLoggedIn }) => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container">
       <div className="row d-flex justify-content-center align-items-center login-row">
-        <div className="col-xl-5 col-lg-6">
+        <div className="col-xl-5 col-lg-6 d-lg-block d-md-none d-sm-none">
           <div>
             <img src={loginPic} alt="login image" />
           </div>
         </div>
         <div className="col-xl-5 col-lg-6 col-md-8">
           <div className="border px-5 login-form">
-            {/* <h1 className="my-5">Instagram</h1> */}
-            <img
-              src="https://logos-download.com/wp-content/uploads/2016/03/Instagram_Logo_2016.png"
-              alt="insta logo"
-              id="insta_name_icon"
-              className="mt-5 justify-content-center"
-            />
+            <div className="d-flex justify-content-center my-3">
+              <img
+                src="https://logos-download.com/wp-content/uploads/2016/03/Instagram_Logo_2016.png"
+                alt="insta logo"
+                id="insta_name_icon"
+                className="mt-5 justify-content-center"
+              />
+            </div>
             <form action="" className="" id="needs-validation">
               <div className="input-group mb-3">
                 <input
@@ -64,34 +65,35 @@ const Login = ({ setLoggedIn }) => {
               </button>
             </form>
             <hr />
-            <div>OR</div>
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              className="my-3 text-decoration-none fw-bolder "
-            >
-              <span className="me-1">
-                <img src={Facebook} alt="facebook icon" />
-              </span>
-              Log in with Facebook
-            </a>
-
-            <div className="my-3">
-              <Link
-                to="/forgotpassword"
-                className="text-decoration-none text-muted"
+            <div className="d-flex flex-column align-items-center">
+              OR
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                className="my-3 text-decoration-none fw-bolder "
               >
-                <small>Forgotten your password?</small>
-              </Link>
+                <span className="me-1">
+                  <img src={Facebook} alt="facebook icon" />
+                </span>
+                Log in with Facebook
+              </a>
+              <div className="my-3">
+                <Link
+                  to="/forgotpassword"
+                  className="text-decoration-none text-muted"
+                >
+                  <small>Forgotten your password?</small>
+                </Link>
+              </div>
             </div>
           </div>
-          <div className="mt-3 p-3 border">
+          <div className="mt-3 p-3 border d-flex flex-column align-items-center ">
             Don't have an account?{" "}
             <Link to="/signup" className="fw-bolder text-decoration-none">
               Sign up
             </Link>
           </div>
-          <div className="mt-3">
+          <div className="mt-3 d-flex flex-column align-items-center">
             <p>Get the app.</p>
           </div>
           <div className="d-flex justify-content-center mt-3">

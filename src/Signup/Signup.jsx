@@ -32,11 +32,13 @@ const Signup = () => {
       <div className="row mt-5 d-flex justify-content-center">
         <div className="col-lg-6">
           <div className="border px-5">
-            <h1 className="my-4">Instagram</h1>
+            <div className="d-flex justify-content-center">
+              <h1 className="my-4">Instagram</h1>
+            </div>
             <p className="text-muted my-3 fw-bold">
               Sign up to see photos and videos from your friends.
             </p>
-            <a href="https://www.facebook.com">
+            <a href="https://www.facebook.com" target="_blank">
               <button className="btn btn-primary w-100">
                 <span>
                   <img src={Facebook} alt="facebook logo" />
@@ -45,7 +47,9 @@ const Signup = () => {
               </button>
             </a>
             <hr />
-            <div className="text-muted">OR</div>
+            <div className="text-muted d-flex justify-content-center mb-2">
+              OR
+            </div>
             <form action="" id="needs-validation" noValidate>
               <div className="input-group mb-2">
                 <input
@@ -110,13 +114,13 @@ const Signup = () => {
               </button>
             </form>
           </div>
-          <div className="p-3 border mt-3">
+          <div className="d-flex justify-content-center p-3 border mt-3">
             Have an account?{" "}
             <Link to="/" className="text-decoration-none">
               Log in
             </Link>
           </div>
-          <div className="mt-3">
+          <div className="mt-3 d-flex flex-column align-items-center justify-content-center">
             <p>Get the app.</p>
             <div className="d-flex justify-content-center mt-3">
               <a

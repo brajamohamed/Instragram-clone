@@ -1,5 +1,5 @@
 .post {
-  margin: 30px 40px;
+  margin: 5px 40px;
   width: 75%;
 }
 
@@ -51,4 +51,32 @@
 }
 .saved {
   color: rgb(131, 131, 234);
+}
+.comment-input {
+  border-radius: 10px;
+  margin-top: 5px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.input-group {
+  display: flex;
+  align-items: center;
+}
+.comment-btn {
+  position: relative;
+  left: 4.5em;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.post-comments {
+  display: flex;
+  align-items: center;
+}
+.post-comment {
+  flex: 0.7;
+}
+.comment-delete {
+  flex: 0.3;
 }

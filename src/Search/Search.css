@@ -1,0 +1,9 @@
+.searchBarOffcanvas {
+  z-index: 9999999;
+}
+.searchResult {
+  display: flex;
+  margin-top: 6px;
+  margin-left: 10px;
+  cursor: pointer;
+}

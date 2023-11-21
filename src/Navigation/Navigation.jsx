@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.bundle.js";
 import "./Navigation.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
@@ -18,24 +19,16 @@ import ModeNightIcon from "@mui/icons-material/ModeNight";
 import ReportGmailerrorredIcon from "@mui/icons-material/ReportGmailerrorred";
 import InstaNameLogo from "./instagram-logo-white-text-black-background.png";
 import { Link } from "react-router-dom";
-const Navigation = () => {
+const Navigation = ({ setCreate, setSearch }) => {
+  const handleCreate = () => {
+    setCreate(true);
+  };
   return (
     <div className="sideNavbar">
-      {/* <button
-        className="btn d-lg-none"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#menu"
-        id="toggleButton"
-      >
-        <span className="navbar-toggler-icon">
-          <MenuIcon color="secondary" />
-        </span>
-      </button> */}
       <div
         class="offcanvas offcanvas-start show navbar"
         data-bs-scroll="true"
-        data-bs-backdrop="flase"
+        data-bs-backdrop="true"
         tabindex="-1"
         id="menu"
       >
@@ -60,7 +53,7 @@ const Navigation = () => {
             </li>
 
             <li>
-              <Link to="/">
+              <Link to="/" type="button" onClick={() => setSearch(true)}>
                 <SearchIcon className="me-2" />
                 Search
               </Link>
@@ -95,7 +88,7 @@ const Navigation = () => {
             </li>
 
             <li>
-              <Link to="/">
+              <Link to="/" type="button" onClick={handleCreate}>
                 <ControlPointIcon className="me-2" />
                 Create
               </Link>

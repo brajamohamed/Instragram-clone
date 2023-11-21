@@ -10,8 +10,8 @@ const Suggestion = ({ item }) => {
   };
 
   return (
-    <div>
-      <div className="username__left">
+    <div className="row">
+      <div className="username__left col-8">
         <span className="avatar">
           <Avatar>{item.username.charAt(0).toUpperCase()}</Avatar>
         </span>
@@ -20,9 +20,11 @@ const Suggestion = ({ item }) => {
           <span className="relation">New to Instagram</span>
         </div>
       </div>
-      <button className="follow__button" onClick={() => handleFollow()}>
-        {follow ? "Following" : "Follow"}
-      </button>
+      <div className="col-4">
+        <button className="follow__button" onClick={() => handleFollow()}>
+          {follow ? "Following" : "Follow"}
+        </button>
+      </div>
     </div>
   );
 };

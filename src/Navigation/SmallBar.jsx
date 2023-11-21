@@ -17,7 +17,10 @@ import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import ModeNightIcon from "@mui/icons-material/ModeNight";
 import ReportGmailerrorredIcon from "@mui/icons-material/ReportGmailerrorred";
 import { Link } from "react-router-dom";
-const SmallBar = () => {
+const SmallBar = ({ setCreate, setSearch }) => {
+  const handleCreate = () => {
+    setCreate(true);
+  };
   return (
     <div className="sideSmallbar">
       <div
@@ -41,7 +44,7 @@ const SmallBar = () => {
             </li>
 
             <li>
-              <Link to="/">
+              <Link to="/" type="button" onClick={() => setSearch(true)}>
                 <SearchIcon className="small-icon" />
               </Link>
             </li>
@@ -72,7 +75,11 @@ const SmallBar = () => {
 
             <li>
               <Link to="/">
-                <ControlPointIcon className="small-icon" />
+                <ControlPointIcon
+                  className="small-icon"
+                  type="button"
+                  onClick={handleCreate}
+                />
               </Link>
             </li>
             <div className="dropup profile-section">
@@ -86,31 +93,31 @@ const SmallBar = () => {
               <ul className="dropdown-menu">
                 <li>
                   <Link to="">
-                    <SettingsIcon className="me-2" />
+                    <SettingsIcon />
                     Settings
                   </Link>
                 </li>
                 <li>
                   <Link to="">
-                    <MonitorHeartIcon className="me-2" />
+                    <MonitorHeartIcon />
                     Your Activity
                   </Link>
                 </li>
                 <li>
                   <Link to="">
-                    <BookmarkBorderIcon className="me-2" />
+                    <BookmarkBorderIcon />
                     Saved
                   </Link>
                 </li>
                 <li>
                   <Link to="">
-                    <ModeNightIcon className="me-2" />
+                    <ModeNightIcon />
                     Switch appearance
                   </Link>
                 </li>
                 <li>
                   <Link to="">
-                    <ReportGmailerrorredIcon className="me-2" />
+                    <ReportGmailerrorredIcon />
                     Report a problem
                   </Link>
                 </li>
