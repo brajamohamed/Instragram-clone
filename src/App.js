@@ -1,19 +1,37 @@
 import "./App.css";
-import Login from "./Login/Login";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Signup from "./Signup/Signup";
-import Home from "./Home/Home";
-import ForgotPassword from "./ForgotPassword/ForgotPassword";
 import { useEffect, useState } from "react";
-import Profile from "./Profile/Profile";
-import CreatePost from "./CreatePost/CreatePost";
+import Login from "./Login/Login";
+import Signup from "./Signup/Signup";
+import ForgotPassword from "./ForgotPassword/ForgotPassword";
+import Navigation from "./Navigation/Navigation";
+import SmallBar from "./Navigation/SmallBar";
+import Timeline from "./Timeline/Timeline";
+import Search from "./Search/Search";
 import Explore from "./Explore/Explore";
-
+import Reels from "./Reels/Reels";
+import CreatePost from "./CreatePost/CreatePost";
+import Profile from "./Profile/Profile";
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
+  const [search, setSearch] = useState(false);
   const [create, setCreate] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 1400);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const [posts, setPosts] = useState([
     {
       user: "MSD",
@@ -108,141 +126,199 @@ function App() {
   ]);
   const videos = [
     {
-      url: "https://www.youtube.com/embed/pk9BVQx6X6g?si=AgJCL3XdI7XmkyIq",
+      likes: "51.3k",
+      comments: 7856,
+      url: "https://youtube.com/embed/t9taDzQ9ETM",
       userName: "Madan Gowri",
       text: "Only one left ",
     },
     {
-      url: "https://www.youtube.com/embed/i8Da_4atGko?si=ipZfw-_6mrNO8ydc",
+      likes: "5k",
+      comments: 452,
+      url: "https://www.youtube.com/embed/6xfc3ybbx1Y",
       userName: "Junglee Music Tamil",
       text: "Periyappa romba rasiyana aalu ",
     },
     {
-      url: "https://www.youtube.com/embed/jbqimIx-Cdw?si=Gl4pSWXY8ZKDyCbo&amp;controls=0",
+      likes: "53k",
+      comments: 874,
+      url: "https://www.youtube.com/embed/vAKmkn3eIcQ",
       userName: "Junglee Music Tamil",
       text: "Periyappa romba rasiyana aalu ",
     },
     {
-      url: "https://www.youtube.com/embed/i8Da_4atGko?si=ipZfw-_6mrNO8ydc",
+      likes: "1.3k",
+      comments: 521,
+      url: "https://www.youtube.com/embed/sNFPOQmjaU4",
       userName: "Junglee Music Tamil",
       text: "Periyappa romba rasiyana aalu ",
     },
     {
-      url: "https://www.youtube.com/embed/BZzqT550smY?si=ppoE_AgxqlK15UHu&amp;controls=0",
+      likes: "3.2k",
+      comments: 785,
+      url: "https://www.youtube.com/embed/MlVgvmQvXPY",
       userName: "Junglee Music Tamil",
       text: "Periyappa romba rasiyana aalu ",
     },
     {
-      url: "https://www.youtube.com/embed/0OTliqOwpgU?si=SWpu28xpO6KFf8nf&amp;controls=0",
+      likes: "756",
+      comments: 127,
+      url: "https://www.youtube.com/embed/awxZu-s_fHE",
       userName: "Junglee Music Tamil",
       text: "Periyappa romba rasiyana aalu ",
     },
     {
-      url: "https://www.youtube.com/embed/i8Da_4atGko?si=ipZfw-_6mrNO8ydc",
+      likes: "30k",
+      comments: 1002,
+      url: "https://www.youtube.com/embed/MtNmD8JPrJY",
       userName: "Junglee Music Tamil",
       text: "Periyappa romba rasiyana aalu ",
     },
     {
-      url: "https://www.youtube.com/embed/i8Da_4atGko?si=ipZfw-_6mrNO8ydc",
+      likes: "55",
+      comments: 5,
+      url: "https://www.youtube.com/shorts/6NETeyCzWJg",
       userName: "Junglee Music Tamil",
       text: "Periyappa romba rasiyana aalu ",
     },
     {
-      url: "https://www.youtube.com/embed/i8Da_4atGko?si=ipZfw-_6mrNO8ydc",
+      likes: "952",
+      comments: 123,
+      url: "https://www.youtube.com/shorts/bb-cZTWeTbo",
       userName: "Junglee Music Tamil",
       text: "Periyappa romba rasiyana aalu ",
     },
     {
-      url: "https://www.youtube.com/embed/i8Da_4atGko?si=ipZfw-_6mrNO8ydc",
+      likes: "97",
+      comments: 8,
+      url: "https://www.youtube.com/embed/3DAdfKHuClg",
       userName: "Junglee Music Tamil",
       text: "Periyappa romba rasiyana aalu ",
     },
     {
-      url: "https://www.youtube.com/embed/i8Da_4atGko?si=ipZfw-_6mrNO8ydc",
+      likes: "21.3k",
+      comments: 552,
+      url: "https://www.youtube.com/embed/N_sqPZLV69M",
       userName: "Junglee Music Tamil",
       text: "Periyappa romba rasiyana aalu ",
     },
     {
-      url: "https://www.youtube.com/embed/i8Da_4atGko?si=ipZfw-_6mrNO8ydc",
+      likes: "1.2k",
+      comments: 420,
+      url: "https://www.youtube.com/embed/YR75Zzz74js",
       userName: "Junglee Music Tamil",
       text: "Periyappa romba rasiyana aalu ",
     },
     {
-      url: "https://www.youtube.com/embed/i8Da_4atGko?si=ipZfw-_6mrNO8ydc",
+      likes: "256",
+      comments: 78,
+      url: "https://www.youtube.com/embed/mPrdLqmQt5g",
       userName: "Junglee Music Tamil",
       text: "Periyappa romba rasiyana aalu ",
     },
     {
-      url: "https://www.youtube.com/embed/i8Da_4atGko?si=ipZfw-_6mrNO8ydc",
+      likes: "512",
+      comments: 225,
+      url: "https://www.youtube.com/embed/B8LwRfd8sRs",
       userName: "Junglee Music Tamil",
       text: "Periyappa romba rasiyana aalu ",
     },
     {
-      url: "https://www.youtube.com/embed/i8Da_4atGko?si=ipZfw-_6mrNO8ydc",
+      likes: "221",
+      comments: 52,
+      url: "https://www.youtube.com/embed/_UJOE73oZwE",
       userName: "Junglee Music Tamil",
       text: "Periyappa romba rasiyana aalu ",
     },
     {
-      url: "https://www.youtube.com/embed/i8Da_4atGko?si=ipZfw-_6mrNO8ydc",
+      likes: "700",
+      comments: 745,
+      url: "https://www.youtube.com/embed/hxpjPqs-3lg",
       userName: "Junglee Music Tamil",
       text: "Periyappa romba rasiyana aalu ",
     },
     {
-      url: "https://www.youtube.com/embed/i8Da_4atGko?si=ipZfw-_6mrNO8ydc",
+      likes: "3k",
+      comments: 523,
+      url: "https://www.youtube.com/embed/GC-X9t2sQXI",
       userName: "Junglee Music Tamil",
       text: "Periyappa romba rasiyana aalu ",
     },
     {
-      url: "https://www.youtube.com/embed/i8Da_4atGko?si=ipZfw-_6mrNO8ydc",
+      likes: "51.3k",
+      comments: 785,
+      url: "https://www.youtube.com/embed/i_tc3VsLXfA",
       userName: "Junglee Music Tamil",
       text: "Periyappa romba rasiyana aalu ",
     },
     {
-      url: "https://www.youtube.com/embed/i8Da_4atGko?si=ipZfw-_6mrNO8ydc",
+      likes: "513k",
+      comments: 25,
+      url: "https://www.youtube.com/embed/IQT_vHrWt-M",
       userName: "Junglee Music Tamil",
       text: "Periyappa romba rasiyana aalu ",
     },
     {
-      url: "https://www.youtube.com/embed/i8Da_4atGko?si=ipZfw-_6mrNO8ydc",
+      likes: "53k",
+      comments: 75,
+      url: "https://www.youtube.com/embed/C6gOoD79R3g",
       userName: "Junglee Music Tamil",
       text: "Periyappa romba rasiyana aalu ",
     },
     {
-      url: "https://www.youtube.com/embed/i8Da_4atGko?si=ipZfw-_6mrNO8ydc",
+      likes: "7.2k",
+      comments: 1400,
+      url: "https://www.youtube.com/embed/kWapZjhzHzc",
       userName: "Junglee Music Tamil",
       text: "Periyappa romba rasiyana aalu ",
     },
   ];
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App app-container">
         {create && (
           <CreatePost posts={posts} setPosts={setPosts} setCreate={setCreate} />
         )}
-        <Routes>
-          <Route
-            path="/"
-            element={
-              loggedIn ? (
-                <Home
-                  posts={posts}
-                  setCreate={setCreate}
-                  setPosts={setPosts}
-                  setLoggedIn={setLoggedIn}
-                />
-              ) : (
-                <Login setLoggedIn={setLoggedIn} />
-              )
-            }
-          />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/forgotpassword" element={<ForgotPassword />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route
-            path="/explore"
-            element={<Explore videos={videos} setCreate={setCreate} />}
-          />
-        </Routes>
+        {search && <Search setSearch={setSearch} />}
+        {loggedIn && (
+          <div className="navigation-section">
+            {isSmallScreen ? (
+              <SmallBar
+                setCreate={setCreate}
+                setSearch={setSearch}
+                setLoggedIn={setLoggedIn}
+              />
+            ) : (
+              <Navigation
+                setCreate={setCreate}
+                setSearch={setSearch}
+                setLoggedIn={setLoggedIn}
+              />
+            )}
+          </div>
+        )}
+        <div className="content-section">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                loggedIn ? (
+                  <Timeline posts={posts} setPosts={setPosts} />
+                ) : (
+                  <Login setLoggedIn={setLoggedIn} />
+                )
+              }
+            />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/forgotpassword" element={<ForgotPassword />} />
+            <Route
+              path="/explore"
+              element={<Explore videos={videos} setCreate={setCreate} />}
+            />
+
+            <Route path="/reels" element={<Reels videos={videos} />} />
+          </Routes>
+        </div>
       </div>
     </BrowserRouter>
   );

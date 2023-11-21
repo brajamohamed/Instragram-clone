@@ -17,7 +17,9 @@ import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import ModeNightIcon from "@mui/icons-material/ModeNight";
 import ReportGmailerrorredIcon from "@mui/icons-material/ReportGmailerrorred";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const SmallBar = ({ setCreate, setSearch }) => {
+  const navigatetoHome = useNavigate();
   const handleCreate = () => {
     setCreate(true);
   };
@@ -31,9 +33,12 @@ const SmallBar = ({ setCreate, setSearch }) => {
         id="smallMenu"
       >
         <div class="header mt-4 mb-4">
-          <Link to="" class="offcanvas-title" id="menuLabel">
-            <InstagramIcon className="small-icon" />
-          </Link>
+          <div type="button" class="offcanvas-title" id="menuLabel">
+            <InstagramIcon
+              className="small-icon"
+              onClick={() => navigatetoHome("/")}
+            />
+          </div>
         </div>
         <div class="offcanvas-body">
           <ul>
@@ -56,7 +61,7 @@ const SmallBar = ({ setCreate, setSearch }) => {
             </li>
 
             <li>
-              <Link to="/">
+              <Link to="/reels">
                 <MovieFilterIcon className="small-icon" />
               </Link>
             </li>

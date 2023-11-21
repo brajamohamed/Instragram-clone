@@ -1,0 +1,19 @@
+.reel-post {
+  display: flex;
+}
+.reels-icon {
+  color: white;
+  margin-bottom: 50px;
+  margin-left: 20px;
+}
+.reels-icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.reel-likes {
+  color: white;
+}
+.heart-icon {
+  color: red;
+}

@@ -1,4 +1,16 @@
-/* html {
+html {
   background-color: black;
   color: white;
-} */
+}
+.app-container {
+  display: flex;
+}
+.navigation-section {
+  flex: 0.2;
+  background-color: black;
+}
+.content-section {
+  background-color: black;
+  flex: 0.8;
+  flex-grow: 1;
+}

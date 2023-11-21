@@ -19,7 +19,9 @@ import ModeNightIcon from "@mui/icons-material/ModeNight";
 import ReportGmailerrorredIcon from "@mui/icons-material/ReportGmailerrorred";
 import InstaNameLogo from "./instagram-logo-white-text-black-background.png";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Navigation = ({ setCreate, setSearch, setLoggedIn }) => {
+  const navigate = useNavigate();
   const handleCreate = () => {
     setCreate(true);
   };
@@ -34,14 +36,13 @@ const Navigation = ({ setCreate, setSearch, setLoggedIn }) => {
       >
         <div class="offcanvas-header mt-4">
           <h5 class="offcanvas-title bg-white" id="menuLabel">
-            <img src={InstaNameLogo} alt="insta-name-logo" id="nav-inta-icon" />
+            <img
+              src={InstaNameLogo}
+              alt="insta-name-logo"
+              id="nav-inta-icon"
+              onClick={() => navigate("/")}
+            />
           </h5>
-          {/* <button
-            type="button"
-            className="btn-close text-white bg-white"
-            data-bs-dismiss="offcanvas"
-            data-bs-target="#menu"
-          ></button> */}
         </div>
         <div class="offcanvas-body">
           <ul>
@@ -67,7 +68,7 @@ const Navigation = ({ setCreate, setSearch, setLoggedIn }) => {
             </li>
 
             <li>
-              <Link to="/">
+              <Link to="/reels">
                 <MovieFilterIcon className="me-2" />
                 Reels
               </Link>

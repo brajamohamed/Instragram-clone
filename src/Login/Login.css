@@ -2,9 +2,10 @@
   width: 90%;
   height: 60px;
 }
-.container {
+.login-container {
   max-height: 100vh;
   min-height: 100vh;
+  background-color: white;
 }
 .login-row {
   max-height: 100vh;

@@ -19,59 +19,69 @@ const ForgotPassword = () => {
     }
   };
   return (
-    <div className="container">
-      <div className="row d-flex justify-content-center mt-5 ">
-        <div className="col-lg-6 p-5 border content">
-          <img
-            className="card-img-top"
-            src={LockIcon}
-            alt="lock icon"
-            // id="lockIcon"
-          />
-          <h5 className="mt-3">Trouble with logging in?</h5>
-          <small className="text-muted mt-3">
-            Enter your email address, we'll send you a link to get back into
-            your account.
-          </small>
-          <form
-            action=""
-            className="mt-3 form"
-            id="needs-validation"
-            noValidate
-          >
-            <div className="input-group">
-              <input
-                type="email"
-                className="form-control"
-                placeholder="Email address"
-                required
-                ref={usernameRef}
+    <div className="container-fluid forgot-container pt-5">
+      <div className="container">
+        <div className="row d-flex justify-content-center ">
+          <div className="col-lg-6 px-5 py-3 border content ">
+            <div className="d-flex justify-content-center">
+              <img
+                className="card-img-top"
+                src={LockIcon}
+                alt="lock icon"
+                // id="lockIcon"
               />
             </div>
-            <button
-              className="btn btn-primary rounded mt-3"
-              onClick={handleClick}
+            <h5 className="mt-3 d-flex justify-content-center">
+              Trouble with logging in?
+            </h5>
+            <small className="text-muted mt-3 d-flex justify-content-center">
+              Enter your email address, we'll send you a link to get back into
+              your account.
+            </small>
+            <form
+              action=""
+              className="mt-3 form "
+              id="needs-validation"
+              noValidate
             >
-              Send Login Link
-            </button>
-            <div className="mt-1">
-              <small>Can't reset your password?</small>
-            </div>
-          </form>
+              <div className="input-group">
+                <input
+                  type="email"
+                  className="form-control"
+                  placeholder="Email address"
+                  required
+                  ref={usernameRef}
+                />
+              </div>
+              <div className="d-flex justify-content-center">
+                <button
+                  className="btn btn-primary rounded mt-3"
+                  onClick={handleClick}
+                >
+                  Send Login Link
+                </button>
+              </div>
+              <div className="mt-1 d-flex justify-content-center">
+                <small>Can't reset your password?</small>
+              </div>
+            </form>
 
-          <hr />
-          <div className="mb-5">
-            OR <br />
-            <Link to="/signup" className="text-decoration-none text-muted">
-              <h5>Create New Account</h5>
-            </Link>
-          </div>
-          <div className="border">
-            <Link to="/" className="text-decoration-none">
-              <button className="btn d-block w-100">
-                <h5 className="text-decoration-none">Back to Login</h5>
-              </button>
-            </Link>
+            <hr />
+            <div>
+              <div className="d-flex justify-content-center">OR</div>
+              <div className="d-flex justify-content-center">
+                <Link to="/signup" className="text-decoration-none text-muted">
+                  <h5 className="create-new-account">Create New Account</h5>
+                </Link>
+              </div>
+            </div>
+            <div className="border mt-4">
+              <Link to="/" className="text-decoration-none">
+                <button className="btn d-block w-100">
+                  <h5 className="text-decoration-none">Back to Login</h5>
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

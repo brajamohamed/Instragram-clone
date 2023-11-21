@@ -10,9 +10,9 @@ const Suggestion = ({ item }) => {
   };
 
   return (
-    <div className="row">
+    <div className="row mb-3">
       <div className="username__left col-8">
-        <span className="avatar">
+        <span className="avatar me-2">
           <Avatar>{item.username.charAt(0).toUpperCase()}</Avatar>
         </span>
         <div className="username__info">

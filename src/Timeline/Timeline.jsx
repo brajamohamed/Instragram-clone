@@ -5,9 +5,9 @@ import Stories from "./Stories/Stories";
 import Suggestions from "./Suggestions/Suggestions";
 const Timeline = ({ posts, setPosts }) => {
   return (
-    <div className="timeline container-fluid">
-      <div className="row">
-        <div className="timeline__left col-xl-7">
+    <div className="timeline">
+      <div className="row d-flex justify-content-center">
+        <div className="timeline__left col-xxl-6 col-xl-7">
           <div className="timeline__posts">
             <div className="story">
               <Stories className="story" />
@@ -26,7 +26,7 @@ const Timeline = ({ posts, setPosts }) => {
             ))}
           </div>
         </div>
-        <div className="timeline__right col-xl-5 col-lg-none d-lg-none d-md-none d-sm-none d-xl-block">
+        <div className="timeline__right col-xxl-5 d-xxl-block d-xl-none d-lg-none d-lg-none d-md-none d-sm-none  text-white">
           <Suggestions />
         </div>
       </div>

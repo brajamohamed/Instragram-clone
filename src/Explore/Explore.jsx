@@ -20,26 +20,23 @@ const Explore = ({ videos, setCreate }) => {
     };
   }, []);
   return (
-    <div className="exploreContainer">
-      <div className="navigation-item col-xl-2 col-lg-1">
-        {isSmallScreen ? (
-          <SmallBar setCreate={setCreate} setSearch={setSearch} />
-        ) : (
-          <Navigation setCreate={setCreate} setSearch={setSearch} />
-        )}
-      </div>
-      {videos.map((video) => (
-        <iframe
-          className="reel"
-          width="560"
-          height="315"
-          src={video.url}
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      ))}
+    <div className="exploreContainer container-md mt-5">
+      {videos.map((video) => {
+        return (
+          <div className="reel">
+            <iframe
+              width="400"
+              height="400"
+              src={video.url}
+              title="G pay account open Tamil 💴💵💰 | #shorts #tamil"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div></div>
+          </div>
+        );
+      })}
     </div>
   );
 };

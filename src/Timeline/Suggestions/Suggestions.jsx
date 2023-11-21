@@ -27,11 +27,12 @@ function Suggestions() {
       username: "Aira Fathima",
     },
     {
-      username: "Karthiga Ravindran",
+      username: "Rayeesa Fathima",
     },
   ];
   return (
     <div className="suggestions container">
+      <div className="user"></div>
       <div className="suggestions__title">Suggestions to follow</div>
       <div className="suggestions__username ">
         {suggests.map((item) => {
