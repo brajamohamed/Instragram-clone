@@ -1,0 +1,10 @@
+.exploreContainer {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.reel {
+  flex-basis: calc(33.3333% - 20px);
+  margin: 3px;
+}

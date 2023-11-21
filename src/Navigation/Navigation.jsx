@@ -19,7 +19,7 @@ import ModeNightIcon from "@mui/icons-material/ModeNight";
 import ReportGmailerrorredIcon from "@mui/icons-material/ReportGmailerrorred";
 import InstaNameLogo from "./instagram-logo-white-text-black-background.png";
 import { Link } from "react-router-dom";
-const Navigation = ({ setCreate, setSearch }) => {
+const Navigation = ({ setCreate, setSearch, setLoggedIn }) => {
   const handleCreate = () => {
     setCreate(true);
   };
@@ -46,21 +46,21 @@ const Navigation = ({ setCreate, setSearch }) => {
         <div class="offcanvas-body">
           <ul>
             <li>
-              <Link to="">
+              <Link to="/">
                 <HomeIcon className="me-2" />
                 Home
               </Link>
             </li>
 
             <li>
-              <Link to="/" type="button" onClick={() => setSearch(true)}>
+              <Link type="button" onClick={() => setSearch(true)}>
                 <SearchIcon className="me-2" />
                 Search
               </Link>
             </li>
 
             <li>
-              <Link to="/">
+              <Link to="/explore">
                 <ExploreIcon className="me-2" />
                 Explore
               </Link>
@@ -137,7 +137,9 @@ const Navigation = ({ setCreate, setSearch }) => {
                   <Link to="">Switch accounts</Link>
                 </li>
                 <li>
-                  <Link to="">Log out</Link>
+                  <Link to="" type="button" onClick={() => setLoggedIn(false)}>
+                    Log out
+                  </Link>
                 </li>
               </ul>
             </div>

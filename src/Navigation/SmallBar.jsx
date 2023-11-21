@@ -44,13 +44,13 @@ const SmallBar = ({ setCreate, setSearch }) => {
             </li>
 
             <li>
-              <Link to="/" type="button" onClick={() => setSearch(true)}>
+              <Link type="button" onClick={() => setSearch(true)}>
                 <SearchIcon className="small-icon" />
               </Link>
             </li>
 
             <li>
-              <Link to="/">
+              <Link to="/explore">
                 <ExploreIcon className="small-icon" />
               </Link>
             </li>

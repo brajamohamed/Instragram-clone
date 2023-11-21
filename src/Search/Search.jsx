@@ -22,14 +22,27 @@ const Search = ({ setSearch }) => {
   }, [searchText]);
   useEffect(() => {}, [filter]);
   const userNames = [
-    "I'mRo45",
+    "Rohit Sharma",
+    "Suresh Raina",
     "Mohammed Shami",
-    "BumBumRa",
-    "IamSiraj",
-    "Sachin",
-    "Gambhir",
+    "Jasprit Bumrah",
+    "Siraj Mohammed",
+    "Sachin Tendulkar",
     "Sara Tendulkar",
-    "I'Ricky",
+    "Ricky Pointing",
+    "Mahendra Singh Dhoni",
+    "Priya Bhavani Shankar",
+    "Karthiga Ravindaran",
+    "Yamunna Ganapathi",
+    "Trisha Krishnan",
+    "Madonna Sebastian",
+    "Vijay Sethupathi",
+    "RajiniKanth",
+    "Virendar Shewag",
+    "Gautam Gambhir",
+    "Rahul Gandhi",
+    "Narendra Modi",
+    "MK Stalin",
   ];
   return (
     <div className="searchBarOffcanvas ">
@@ -63,7 +76,11 @@ const Search = ({ setSearch }) => {
             </div>
           </div>
           {searchText &&
-            filter.map((user) => <div className="searchResult">{user}</div>)}
+            filter.map((user) => (
+              <div className="searchResult">
+                {user} <hr />
+              </div>
+            ))}
         </div>
       </div>
     </div>

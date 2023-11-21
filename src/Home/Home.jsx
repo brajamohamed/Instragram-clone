@@ -5,7 +5,7 @@ import Timeline from "../Timeline/Timeline";
 import { useState, useEffect } from "react";
 import SmallBar from "../Navigation/SmallBar";
 import Search from "../Search/Search";
-const Home = ({ posts, setPosts, setCreate }) => {
+const Home = ({ posts, setPosts, setCreate, setLoggedIn }) => {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
   const [search, setSearch] = useState(false);
 
@@ -26,9 +26,17 @@ const Home = ({ posts, setPosts, setCreate }) => {
       <div className="row">
         <div className="navigation-item col-xl-2 col-lg-1">
           {isSmallScreen ? (
-            <SmallBar setCreate={setCreate} setSearch={setSearch} />
+            <SmallBar
+              setCreate={setCreate}
+              setSearch={setSearch}
+              setLoggedIn={setLoggedIn}
+            />
           ) : (
-            <Navigation setCreate={setCreate} setSearch={setSearch} />
+            <Navigation
+              setCreate={setCreate}
+              setSearch={setSearch}
+              setLoggedIn={setLoggedIn}
+            />
           )}
         </div>
         <div className="timeline-item col-xl-10 col-lg-11">
